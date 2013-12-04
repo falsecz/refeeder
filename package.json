@@ -2,6 +2,11 @@
   "name": "refeeder",
   "version": "0.0.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/falsecz/refeeder.git"
+  },
+
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
