@@ -1,0 +1,13 @@
+{
+  "name": "refeeder",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "hiredis": "~0.1.15",
+    "redis": "~0.9.1",
+    "async": "~0.2.9",
+    "line-reader": "~0.2.3"
+  }
+}
