@@ -24,9 +24,20 @@ lineReader.eachLine file, (line, last, done) ->
 
 ops =
 	zset: (key, pairs, done) ->
-		async.forEachLimit pairs, 200, (pair, next) ->
-			redis.zadd [key, pair[1], pair[0]], next
-		, done
+		o = [key]
+		for p in pairs
+			o.push p[1]
+			o.push p[0]
+		redis.zadd o, done
+
+
+		# o = [key]
+		# for p in pairs
+		# 	o.concat [p[1], p[0]]
+		# redis.zadd o, next
+		# async.forEachLimit pairs, 200, (pair, next) ->
+		# 	redis.zadd [key, pair[1], pair[0]], next
+		# , done
 
 lines = 0
 processLine = (line, done) ->
